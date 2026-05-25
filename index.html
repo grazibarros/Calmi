@@ -125,11 +125,50 @@
       text-align: center;
     }
 
-    .about p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 18px;
-      color: #3f5337;
+    .about-text {
+  max-width: 850px;
+  margin: auto;
+  font-size: 18px;
+  color: #3f5337;
+  margin-bottom: 40px;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.mvv-card {
+  background-color: #f8f4ec;
+  padding: 28px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  text-align: left;
+  border-top: 4px solid #b59a58;
+}
+
+.mvv-card h3 {
+  color: #526b45;
+  font-size: 25px;
+  margin-bottom: 12px;
+}
+
+.mvv-card p {
+  font-size: 16px;
+  color: #3f5337;
+}
+
+.mvv-card ul {
+  padding-left: 20px;
+  color: #3f5337;
+  font-size: 16px;
+}
+
+.mvv-card li {
+  margin-bottom: 8px;
+}
     }
 
     .products {
