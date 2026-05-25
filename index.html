@@ -246,9 +246,27 @@
       margin-bottom: 20px;
     }
 
-    .contact p {
-      margin-bottom: 10px;
-      font-size: 18px;
+    .contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 25px 0;
+}
+
+.contact-btn {
+  background-color: #f1dfb0;
+  color: #2f3d2f;
+  padding: 13px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.contact-btn:hover {
+  background-color: #ffffff;
+}
     }
 
     footer {
@@ -307,13 +325,50 @@
     </nav>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h2>CALMI</h2>
-      <p>Essências calmantes para seu bem-estar: alivie o estresse de forma natural e prática.</p>
-      <a href="#produtos" class="btn">Conheça nossos óleos</a>
+  <section class="about" id="sobre">
+  <div class="section-title">
+    <h2>Sobre nós</h2>
+    <p>Naturalidade, cuidado e bem-estar</p>
+  </div>
+
+  <p class="about-text">
+    A CALMI é uma empresa de óleos essenciais criada para levar mais calma,
+    equilíbrio e bem-estar para a rotina das pessoas. Trabalhamos com essências
+    naturais pensadas para momentos de autocuidado, relaxamento, foco e conexão
+    com o natural.
+  </p>
+
+  <div class="mvv-grid">
+    <div class="mvv-card">
+      <h3>Missão</h3>
+      <p>
+        Proporcionar bem-estar emocional e equilíbrio diário por meio de óleos
+        essenciais puros e soluções naturais, incentivando o autocuidado e o uso
+        consciente da aromaterapia na rotina.
+      </p>
     </div>
-  </section>
+
+    <div class="mvv-card">
+      <h3>Visão</h3>
+      <p>
+        Tornar-se referência nacional em aromaterapia, levando soluções naturais
+        para lares e ambientes de trabalho, promovendo relaxamento, foco e
+        equilíbrio emocional de forma acessível.
+      </p>
+    </div>
+
+    <div class="mvv-card">
+      <h3>Valores</h3>
+      <ul>
+        <li><strong>Qualidade:</strong> produtos seguros e confiáveis;</li>
+        <li><strong>Empoderamento:</strong> incentivo ao bem-estar na rotina;</li>
+        <li><strong>Sustentabilidade:</strong> práticas responsáveis;</li>
+        <li><strong>Inovação:</strong> soluções naturais de qualidade;</li>
+        <li><strong>Foco no cliente:</strong> experiências que gerem valor real.</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
   <section class="about" id="sobre">
     <div class="section-title">
@@ -344,7 +399,7 @@
           <p class="price">R$ 35,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-lavanda')">Ver informações</button>
-          <a href="#contato" class="btn btn-secondary">Comprar agora</a>
+         <a href="https://wa.me/5511937684484" target="_blank" class="btn btn-secondary">Comprar agora</a>
 
           <div class="info" id="info-lavanda">
             <strong>Benefícios:</strong>
@@ -460,11 +515,26 @@
   </section>
 
   <section class="contact" id="contato">
-    <h2>Comprar ou entrar em contato</h2>
-    <p>Atendimento via e-commerce, WhatsApp e Instagram.</p>
-    <p>Perfil e número oficiais a definir.</p>
-    <p><strong>Fábrica/Escritório:</strong> Rua Elias Gannam, 115 – Vila Bandeirantes – São Paulo – SP</p>
-  </section>
+  <h2>Comprar ou entrar em contato</h2>
+  <p>Fale com a CALMI pelos nossos canais digitais e faça seu pedido.</p>
+
+  <div class="contact-buttons">
+    <a href="https://wa.me/5511937684484" target="_blank" class="contact-btn">
+      WhatsApp: (11) 93768-4484
+    </a>
+
+    <a href="https://wa.me/5511973494761" target="_blank" class="contact-btn">
+      WhatsApp: (11) 97349-4761
+    </a>
+  </div>
+
+  <p><strong>E-mail comercial:</strong> contato@calmiessencias.com</p>
+  <p><strong>E-mail de atendimento:</strong> atendimento@calmiessencias.com</p>
+
+  <p><strong>Instagram:</strong> @calmi.essencias</p>
+
+  <p><strong>Fábrica/Escritório:</strong> Rua Elias Gannam, 115 – Vila Bandeirantes – São Paulo – SP</p>
+</section>
 
   <footer>
     <p>© 2026 CALMI | Essências calmantes para seu bem-estar</p>
