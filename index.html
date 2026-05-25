@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CALMI | Essências Calmantes</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Georgia, 'Times New Roman', serif;
+    }
+
+    body {
+      background-color: #f8f4ec;
+      color: #2f3d2f;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 25px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ddd2bd;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    header h1 {
+      color: #b59a58;
+      letter-spacing: 6px;
+      font-size: 28px;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #526b45;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #526b45;
+      font-weight: bold;
+    }
+
+    .hero {
+      min-height: 85vh;
+      background: linear-gradient(rgba(248, 244, 236, 0.72), rgba(248, 244, 236, 0.72)),
+        url("produtos.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      padding: 60px 8%;
+    }
+
+    .hero-content {
+      max-width: 650px;
+      background-color: rgba(255, 255, 255, 0.82);
+      padding: 40px;
+      border-radius: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .hero h2 {
+      font-size: 46px;
+      color: #b59a58;
+      margin-bottom: 15px;
+      letter-spacing: 4px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 25px;
+      color: #3f5337;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #526b45;
+      color: white;
+      padding: 13px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+      color: #b59a58;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    .about {
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      color: #3f5337;
+    }
+
+    .products {
+      background-color: #f8f4ec;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 25px;
+    }
+
+    .card-content h3 {
+      color: #526b45;
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .card-content p {
+      margin-bottom: 12px;
+      color: #3f5337;
+    }
+
+    .price {
+      color: #b59a58;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .use {
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .use p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+    }
+
+    .contact {
+      background-color: #526b45;
+      color: white;
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #f1dfb0;
+      font-size: 34px;
+      margin-bottom: 20px;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
+    footer {
+      background-color: #2f3d2f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+
+      .hero h2 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <h1>CALMI</h1>
+      <p>essências calmantes</p>
+    </div>
+
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>CALMI</h2>
+      <p>Essências calmantes para seu bem-estar: alivie o estresse de forma natural e prática.</p>
+      <a href="#produtos" class="btn">Conheça nossos óleos</a>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="section-title">
+      <h2>Sobre a CALMI</h2>
+      <p>Naturalidade, calma e bem-estar</p>
+    </div>
+
+    <p>
+      A CALMI comercializa óleos essenciais para aromaterapia, voltados à redução do estresse
+      e à promoção do bem-estar emocional. Trabalhamos com envase, rotulagem e venda via
+      e-commerce, atendendo tanto o público B2C quanto empresas B2B.
+    </p>
+  </section>
+
+  <section class="products" id="produtos">
+    <div class="section-title">
+      <h2>Nossos óleos essenciais</h2>
+      <p>Escolha a essência ideal para o seu momento</p>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="card">
+        <img src="lavanda.jpg" alt="Óleo essencial de Lavanda">
+        <div class="card-content">
+          <h3>Lavanda</h3>
+          <p>Reduz ansiedade, alivia o estresse, melhora o sono e possui propriedades cicatrizantes.</p>
+          <p class="price">R$ 35,00 a R$ 80,00</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="alecrim.jpg" alt="Óleo essencial de Alecrim">
+        <div class="card-content">
+          <h3>Alecrim</h3>
+          <p>Energizante natural, melhora a concentração e a memória, além de auxiliar no crescimento capilar.</p>
+          <p class="price">R$ 35,00 a R$ 80,00</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="capim-limao.jpg" alt="Óleo essencial de Capim-Limão">
+        <div class="card-content">
+          <h3>Capim-Limão</h3>
+          <p>Revigorante, combate a fadiga emocional, melhora a circulação e promove sensação de renovação.</p>
+          <p class="price">R$ 35,00 a R$ 80,00</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="use">
+    <div class="section-title">
+      <h2>Como usar</h2>
+    </div>
+
+    <p>
+      Os óleos essenciais CALMI podem ser utilizados por aplicação tópica em frascos conta-gotas
+      ou sprays, sempre conforme as instruções presentes no rótulo de cada produto.
+    </p>
+  </section>
+
+  <section class="contact" id="contato">
+    <h2>Entre em contato</h2>
+    <p>Atendimento via e-commerce, WhatsApp e Instagram.</p>
+    <p>Perfil e número oficiais a definir.</p>
+    <p><strong>Fábrica/Escritório:</strong> Rua Elias Gannam, 115 – Vila Bandeirantes – São Paulo – SP</p>
+  </section>
+
+  <footer>
+    <p>© 2026 CALMI | Essências calmantes para seu bem-estar</p>
+  </footer>
+
+</body>
+</html>
