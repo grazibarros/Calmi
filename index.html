@@ -151,13 +151,39 @@
       margin-top: 8px;
     }
 
+    .quantity-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 15px;
+    }
+
+    .quantity-box button {
+      background-color: #526b45;
+      color: white;
+      border: none;
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      font-size: 22px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .quantity-box span {
+      font-size: 20px;
+      font-weight: bold;
+      color: #526b45;
+    }
+
     .cart {
       background-color: #ffffff;
       text-align: center;
     }
 
     .cart-box {
-      max-width: 800px;
+      max-width: 850px;
       margin: auto;
       background-color: #f8f4ec;
       border-radius: 20px;
@@ -202,9 +228,36 @@
       color: #526b45;
     }
 
-    .cart-actions {
+    .checkout-form {
+      margin-top: 30px;
       text-align: center;
-      margin-top: 25px;
+    }
+
+    .checkout-form h3 {
+      color: #526b45;
+      margin-bottom: 15px;
+    }
+
+    .checkout-form input,
+    .checkout-form select {
+      width: 100%;
+      padding: 13px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd2bd;
+      border-radius: 12px;
+      font-size: 15px;
+      color: #2f3d2f;
+    }
+
+    #pedido-confirmado {
+      margin-top: 20px;
+      padding: 18px;
+      border-radius: 15px;
+      background-color: #ffffff;
+      color: #526b45;
+      font-weight: bold;
+      display: none;
+      text-align: left;
     }
 
     .about {
@@ -370,12 +423,6 @@
         font-size: 14px;
       }
 
-      .btn-secondary {
-        margin-left: 0;
-        display: block;
-        text-align: center;
-      }
-
       .cart-item {
         flex-direction: column;
         align-items: flex-start;
@@ -417,7 +464,12 @@
           <p class="price">R$ 35,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-lavanda')">Ver informações</button>
-          <button class="btn btn-secondary" onclick="adicionarCarrinho('Lavanda', 35)">Adicionar ao carrinho</button>
+
+          <div class="quantity-box">
+            <button onclick="diminuirQuantidade('Lavanda')">-</button>
+            <span id="qtd-Lavanda">0</span>
+            <button onclick="adicionarCarrinho('Lavanda', 35)">+</button>
+          </div>
 
           <div class="info" id="info-lavanda">
             <strong>Benefícios:</strong>
@@ -439,7 +491,12 @@
           <p class="price">R$ 35,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-alecrim')">Ver informações</button>
-          <button class="btn btn-secondary" onclick="adicionarCarrinho('Alecrim', 35)">Adicionar ao carrinho</button>
+
+          <div class="quantity-box">
+            <button onclick="diminuirQuantidade('Alecrim')">-</button>
+            <span id="qtd-Alecrim">0</span>
+            <button onclick="adicionarCarrinho('Alecrim', 35)">+</button>
+          </div>
 
           <div class="info" id="info-alecrim">
             <strong>Benefícios:</strong>
@@ -461,7 +518,12 @@
           <p class="price">R$ 35,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-capim')">Ver informações</button>
-          <button class="btn btn-secondary" onclick="adicionarCarrinho('Capim-Limão', 35)">Adicionar ao carrinho</button>
+
+          <div class="quantity-box">
+            <button onclick="diminuirQuantidade('Capim-Limão')">-</button>
+            <span id="qtd-Capim-Limão">0</span>
+            <button onclick="adicionarCarrinho('Capim-Limão', 35)">+</button>
+          </div>
 
           <div class="info" id="info-capim">
             <strong>Benefícios:</strong>
@@ -495,9 +557,25 @@
         Total: R$ 0,00
       </div>
 
-      <div class="cart-actions">
+      <div class="checkout-form">
+        <h3>Finalizar pedido</h3>
+
+        <input type="text" id="nomeCliente" placeholder="Seu nome completo">
+        <input type="text" id="telefoneCliente" placeholder="Telefone para contato">
+        <input type="text" id="enderecoCliente" placeholder="Endereço de entrega">
+
+        <select id="pagamentoCliente">
+          <option value="">Escolha a forma de pagamento</option>
+          <option value="Pix">Pix</option>
+          <option value="Cartão de crédito">Cartão de crédito</option>
+          <option value="Cartão de débito">Cartão de débito</option>
+          <option value="Dinheiro">Dinheiro</option>
+        </select>
+
         <button class="btn" onclick="limparCarrinho()">Limpar carrinho</button>
-        <button class="btn btn-secondary" onclick="finalizarPedido()">Finalizar pelo WhatsApp</button>
+        <button class="btn btn-secondary" onclick="finalizarPedidoSite()">Finalizar pedido</button>
+
+        <div id="pedido-confirmado"></div>
       </div>
     </div>
   </section>
@@ -615,7 +693,7 @@
 
   <section class="contact" id="contato">
     <h2>Comprar ou entrar em contato</h2>
-    <p>Fale com a CALMI pelos nossos canais digitais e faça seu pedido.</p>
+    <p>Fale com a CALMI pelos nossos canais digitais.</p>
 
     <div class="contact-buttons">
       <a href="https://wa.me/5511937684484" target="_blank" class="contact-btn">
@@ -629,9 +707,7 @@
 
     <p><strong>E-mail comercial:</strong> contato@calmiessencias.com</p>
     <p><strong>E-mail de atendimento:</strong> atendimento@calmiessencias.com</p>
-
     <p><strong>Instagram:</strong> @calmi.essencias</p>
-
     <p><strong>Fábrica/Escritório:</strong> Rua Elias Gannam, 115 – Vila Bandeirantes – São Paulo – SP</p>
   </section>
 
@@ -666,7 +742,22 @@
       }
 
       atualizarCarrinho();
-      document.getElementById("carrinho").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function diminuirQuantidade(nome) {
+      const produtoExistente = carrinho.find(item => item.nome === nome);
+
+      if (!produtoExistente) {
+        return;
+      }
+
+      produtoExistente.quantidade--;
+
+      if (produtoExistente.quantidade <= 0) {
+        carrinho = carrinho.filter(item => item.nome !== nome);
+      }
+
+      atualizarCarrinho();
     }
 
     function removerItem(nome) {
@@ -677,11 +768,26 @@
     function limparCarrinho() {
       carrinho = [];
       atualizarCarrinho();
+
+      const confirmado = document.getElementById("pedido-confirmado");
+      confirmado.style.display = "none";
+      confirmado.innerHTML = "";
     }
 
     function atualizarCarrinho() {
       const cartItems = document.getElementById("cart-items");
       const cartTotal = document.getElementById("cart-total");
+
+      const produtos = ["Lavanda", "Alecrim", "Capim-Limão"];
+
+      produtos.forEach(produto => {
+        const item = carrinho.find(i => i.nome === produto);
+        const qtdElemento = document.getElementById(`qtd-${produto}`);
+
+        if (qtdElemento) {
+          qtdElemento.innerText = item ? item.quantidade : 0;
+        }
+      });
 
       if (carrinho.length === 0) {
         cartItems.innerHTML = "<p>Seu carrinho está vazio.</p>";
@@ -709,25 +815,46 @@
       cartTotal.innerHTML = `Total: R$ ${total.toFixed(2).replace(".", ",")}`;
     }
 
-    function finalizarPedido() {
+    function finalizarPedidoSite() {
+      const nome = document.getElementById("nomeCliente").value;
+      const telefone = document.getElementById("telefoneCliente").value;
+      const endereco = document.getElementById("enderecoCliente").value;
+      const pagamento = document.getElementById("pagamentoCliente").value;
+      const confirmado = document.getElementById("pedido-confirmado");
+
       if (carrinho.length === 0) {
         alert("Adicione pelo menos um produto ao carrinho.");
         return;
       }
 
-      let mensagem = "Olá! Gostaria de fazer um pedido na CALMI:%0A%0A";
+      if (nome === "" || telefone === "" || endereco === "" || pagamento === "") {
+        alert("Preencha todos os dados para finalizar o pedido.");
+        return;
+      }
+
       let total = 0;
+      let resumo = "";
 
       carrinho.forEach(item => {
         const subtotal = item.preco * item.quantidade;
         total += subtotal;
-        mensagem += `- ${item.nome}: ${item.quantidade} unidade(s) - R$ ${subtotal.toFixed(2).replace(".", ",")}%0A`;
+        resumo += `${item.nome} - ${item.quantidade} unidade(s) - R$ ${subtotal.toFixed(2).replace(".", ",")}<br>`;
       });
 
-      mensagem += `%0ATotal: R$ ${total.toFixed(2).replace(".", ",")}`;
-      mensagem += "%0A%0APoderia me passar as informações para finalizar a compra?";
+      confirmado.style.display = "block";
+      confirmado.innerHTML = `
+        Pedido realizado com sucesso!<br><br>
+        <strong>Cliente:</strong> ${nome}<br>
+        <strong>Telefone:</strong> ${telefone}<br>
+        <strong>Endereço:</strong> ${endereco}<br>
+        <strong>Pagamento:</strong> ${pagamento}<br><br>
+        <strong>Produtos:</strong><br>
+        ${resumo}
+        <br><strong>Total:</strong> R$ ${total.toFixed(2).replace(".", ",")}
+      `;
 
-      window.open(`https://wa.me/5511937684484?text=${mensagem}`, "_blank");
+      carrinho = [];
+      atualizarCarrinho();
     }
   </script>
 
