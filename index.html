@@ -140,13 +140,28 @@
   margin-top: 35px;
 }
 
-.mvv-card {
+.history-box {
+  max-width: 900px;
+  margin: auto;
   background-color: #f8f4ec;
-  padding: 28px;
+  padding: 35px;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
   text-align: left;
-  border-top: 4px solid #b59a58;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  margin-bottom: 40px;
+  border-left: 4px solid #b59a58;
+}
+
+.history-box h3 {
+  color: #526b45;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.history-box p {
+  font-size: 17px;
+  color: #3f5337;
+  margin-bottom: 12px;
 }
 
 .mvv-card h3 {
@@ -356,71 +371,70 @@
       <p>essências calmantes</p>
     </div>
 
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#produtos">Produtos</a>
-      <a href="#uso">Como usar</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
+  <nav>
+  <a href="#sobre">Sobre nós</a>
+  <a href="#produtos">Produtos</a>
+  <a href="#uso">Como usar</a>
+  <a href="#contato">Contato</a>
+</nav>
+</header>
 
-  <section class="about" id="sobre">
+<section class="about" id="sobre">
   <div class="section-title">
     <h2>Sobre nós</h2>
-    <p>Naturalidade, cuidado e bem-estar</p>
+    <p>Conheça a história, missão, visão e valores da CALMI</p>
   </div>
 
-  <p class="about-text">
-    A CALMI é uma empresa de óleos essenciais criada para levar mais calma,
-    equilíbrio e bem-estar para a rotina das pessoas. Trabalhamos com essências
-    naturais pensadas para momentos de autocuidado, relaxamento, foco e conexão
-    com o natural.
-  </p>
+  <div class="history-box">
+    <h3>Nossa história</h3>
+    <p>
+      A CALMI nasceu com o propósito de transformar pequenos momentos da rotina
+      em experiências de cuidado, calma e bem-estar. A empresa surgiu a partir da
+      ideia de oferecer óleos essenciais naturais para pessoas que buscam aliviar
+      o estresse, melhorar a concentração, relaxar e criar uma conexão maior com
+      o autocuidado.
+    </p>
+
+    <p>
+      Com foco em qualidade, segurança e naturalidade, a CALMI trabalha com
+      essências pensadas para diferentes momentos do dia, ajudando seus clientes
+      a encontrarem mais equilíbrio emocional de forma prática e acessível.
+    </p>
+  </div>
 
   <div class="mvv-grid">
     <div class="mvv-card">
       <h3>Missão</h3>
       <p>
         Proporcionar bem-estar emocional e equilíbrio diário por meio de óleos
-        essenciais puros e soluções naturais, incentivando o autocuidado e o uso
-        consciente da aromaterapia na rotina.
+        essenciais puros e soluções naturais, capacitando pessoas a cuidarem de si
+        mesmas e de suas rotinas. Promover o uso consciente e seguro da aromaterapia,
+        educando e inspirando práticas de autocuidado na vida cotidiana.
       </p>
     </div>
 
     <div class="mvv-card">
       <h3>Visão</h3>
       <p>
-        Tornar-se referência nacional em aromaterapia, levando soluções naturais
-        para lares e ambientes de trabalho, promovendo relaxamento, foco e
-        equilíbrio emocional de forma acessível.
+        Tornar-se referência nacional em produtos de aromaterapia, alcançando lares
+        e ambientes de trabalho com soluções naturais que promovam relaxamento, foco
+        e equilíbrio emocional. Expandir a presença da CALMI por meio de educação,
+        inovação e desenvolvimento sustentável.
       </p>
     </div>
 
     <div class="mvv-card">
       <h3>Valores</h3>
       <ul>
-        <li><strong>Qualidade:</strong> produtos seguros e confiáveis;</li>
-        <li><strong>Empoderamento:</strong> incentivo ao bem-estar na rotina;</li>
-        <li><strong>Sustentabilidade:</strong> práticas responsáveis;</li>
-        <li><strong>Inovação:</strong> soluções naturais de qualidade;</li>
-        <li><strong>Foco no cliente:</strong> experiências que gerem valor real.</li>
+        <li><strong>Qualidade:</strong> garantir produtos eficazes, seguros e confiáveis.</li>
+        <li><strong>Empoderamento:</strong> inspirar clientes e parceiros a incorporarem o bem-estar na rotina.</li>
+        <li><strong>Sustentabilidade:</strong> promover práticas responsáveis e conscientes com o meio ambiente.</li>
+        <li><strong>Inovação:</strong> buscar novas formas de oferecer soluções naturais de alta qualidade.</li>
+        <li><strong>Foco no Cliente:</strong> priorizar experiências e resultados que gerem valor real.</li>
       </ul>
     </div>
   </div>
 </section>
-
-  <section class="about" id="sobre">
-    <div class="section-title">
-      <h2>Sobre a CALMI</h2>
-      <p>Naturalidade, cuidado e bem-estar</p>
-    </div>
-
-    <p>
-      A CALMI é uma empresa de óleos essenciais criada para levar mais calma,
-      equilíbrio e bem-estar para a rotina das pessoas. Nossos produtos são pensados
-      para momentos de autocuidado, relaxamento e conexão com o natural.
-    </p>
-  </section>
 
   <section class="products" id="produtos">
     <div class="section-title">
@@ -435,7 +449,7 @@
         <div class="card-content">
           <h3>Lavanda</h3>
           <p>Ideal para momentos de relaxamento e descanso.</p>
-          <p class="price">R$ 35,00</p>
+          <p class="price">R$ 79,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-lavanda')">Ver informações</button>
          <a href="https://wa.me/5511937684484" target="_blank" class="btn btn-secondary">Comprar agora</a>
@@ -457,10 +471,10 @@
         <div class="card-content">
           <h3>Alecrim</h3>
           <p>Perfeito para energia, foco e concentração.</p>
-          <p class="price">R$ 35,00</p>
+          <p class="price">R$ 79,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-alecrim')">Ver informações</button>
-          <a href="#contato" class="btn btn-secondary">Comprar agora</a>
+          <a href="https://wa.me/5511937684484" target="_blank" class="btn btn-secondary">Comprar agora</a>
 
           <div class="info" id="info-alecrim">
             <strong>Benefícios:</strong>
@@ -479,10 +493,10 @@
         <div class="card-content">
           <h3>Capim-Limão</h3>
           <p>Uma essência revigorante para renovar o dia.</p>
-          <p class="price">R$ 35,00</p>
+          <p class="price">R$ 79,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-capim')">Ver informações</button>
-          <a href="#contato" class="btn btn-secondary">Comprar agora</a>
+          <a href="https://wa.me/5511937684484" target="_blank" class="btn btn-secondary">Comprar agora</a>
 
           <div class="info" id="info-capim">
             <strong>Benefícios:</strong>
