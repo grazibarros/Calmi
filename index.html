@@ -49,57 +49,6 @@
       font-weight: bold;
     }
 
-    .hero {
-      min-height: 85vh;
-      background: linear-gradient(rgba(248, 244, 236, 0.72), rgba(248, 244, 236, 0.72)),
-        url("produtos.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      padding: 60px 8%;
-    }
-
-    .hero-content {
-      max-width: 650px;
-      background-color: rgba(255, 255, 255, 0.86);
-      padding: 40px;
-      border-radius: 22px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    }
-
-    .hero h2 {
-      font-size: 46px;
-      color: #b59a58;
-      margin-bottom: 15px;
-      letter-spacing: 4px;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 25px;
-      color: #3f5337;
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #526b45;
-      color: white;
-      padding: 13px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
-      margin-top: 10px;
-      font-size: 15px;
-    }
-
-    .btn-secondary {
-      background-color: #b59a58;
-      margin-left: 8px;
-    }
-
     section {
       padding: 70px 8%;
     }
@@ -120,70 +69,23 @@
       font-size: 17px;
     }
 
-    .about {
-      background-color: #ffffff;
-      text-align: center;
+    .btn {
+      display: inline-block;
+      background-color: #526b45;
+      color: white;
+      padding: 13px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+      font-size: 15px;
     }
 
-    .about-text {
-  max-width: 850px;
-  margin: auto;
-  font-size: 18px;
-  color: #3f5337;
-  margin-bottom: 40px;
-}
-
-.mvv-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-  margin-top: 35px;
-}
-
-.history-box {
-  max-width: 900px;
-  margin: auto;
-  background-color: #f8f4ec;
-  padding: 35px;
-  border-radius: 20px;
-  text-align: left;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-  margin-bottom: 40px;
-  border-left: 4px solid #b59a58;
-}
-
-.history-box h3 {
-  color: #526b45;
-  font-size: 26px;
-  margin-bottom: 12px;
-}
-
-.history-box p {
-  font-size: 17px;
-  color: #3f5337;
-  margin-bottom: 12px;
-}
-
-.mvv-card h3 {
-  color: #526b45;
-  font-size: 25px;
-  margin-bottom: 12px;
-}
-
-.mvv-card p {
-  font-size: 16px;
-  color: #3f5337;
-}
-
-.mvv-card ul {
-  padding-left: 20px;
-  color: #3f5337;
-  font-size: 16px;
-}
-
-.mvv-card li {
-  margin-bottom: 8px;
-}
+    .btn-secondary {
+      background-color: #b59a58;
+      margin-left: 8px;
     }
 
     .products {
@@ -249,15 +151,137 @@
       margin-top: 8px;
     }
 
-    .use {
+    .cart {
       background-color: #ffffff;
+      text-align: center;
+    }
+
+    .cart-box {
+      max-width: 800px;
+      margin: auto;
+      background-color: #f8f4ec;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      text-align: left;
+    }
+
+    .cart-box h3 {
+      color: #526b45;
+      font-size: 26px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #ddd2bd;
+      color: #3f5337;
+      font-size: 17px;
+    }
+
+    .cart-item button {
+      background-color: #b59a58;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .cart-total {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #526b45;
+    }
+
+    .cart-actions {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    .about {
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .history-box {
+      max-width: 900px;
+      margin: auto;
+      background-color: #f8f4ec;
+      padding: 35px;
+      border-radius: 20px;
+      text-align: left;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      margin-bottom: 40px;
+      border-left: 4px solid #b59a58;
+    }
+
+    .history-box h3 {
+      color: #526b45;
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .history-box p {
+      font-size: 17px;
+      color: #3f5337;
+      margin-bottom: 12px;
+    }
+
+    .mvv-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+
+    .mvv-card {
+      background-color: #f8f4ec;
+      padding: 28px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      text-align: left;
+      border-top: 4px solid #b59a58;
+    }
+
+    .mvv-card h3 {
+      color: #526b45;
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+
+    .mvv-card p {
+      font-size: 16px;
+      color: #3f5337;
+    }
+
+    .mvv-card ul {
+      padding-left: 20px;
+      color: #3f5337;
+      font-size: 16px;
+    }
+
+    .mvv-card li {
+      margin-bottom: 8px;
+    }
+
+    .use {
+      background-color: #f8f4ec;
       text-align: center;
     }
 
     .use-box {
       max-width: 900px;
       margin: auto;
-      background-color: #f8f4ec;
+      background-color: #ffffff;
       padding: 35px;
       border-radius: 20px;
       text-align: left;
@@ -300,27 +324,31 @@
       margin-bottom: 20px;
     }
 
+    .contact p {
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+
     .contact-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin: 25px 0;
-}
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin: 25px 0;
+    }
 
-.contact-btn {
-  background-color: #f1dfb0;
-  color: #2f3d2f;
-  padding: 13px 25px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  display: inline-block;
-}
+    .contact-btn {
+      background-color: #f1dfb0;
+      color: #2f3d2f;
+      padding: 13px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+    }
 
-.contact-btn:hover {
-  background-color: #ffffff;
-}
+    .contact-btn:hover {
+      background-color: #ffffff;
     }
 
     footer {
@@ -342,22 +370,15 @@
         font-size: 14px;
       }
 
-      .hero h2 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 17px;
-      }
-
       .btn-secondary {
         margin-left: 0;
         display: block;
         text-align: center;
       }
 
-      .use-box {
-        padding: 25px;
+      .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -371,75 +392,19 @@
       <p>essências calmantes</p>
     </div>
 
-  <nav>
-  <a href="#sobre">Sobre nós</a>
-  <a href="#produtos">Produtos</a>
-  <a href="#uso">Como usar</a>
-  <a href="#contato">Contato</a>
-</nav>
-</header>
-
-<section class="about" id="sobre">
-  <div class="section-title">
-    <h2>Sobre nós</h2>
-    <p>Conheça a história, missão, visão e valores da CALMI</p>
-  </div>
-
-  <div class="history-box">
-    <h3>Nossa história</h3>
-    <p>
-      A CALMI nasceu com o propósito de transformar pequenos momentos da rotina
-      em experiências de cuidado, calma e bem-estar. A empresa surgiu a partir da
-      ideia de oferecer óleos essenciais naturais para pessoas que buscam aliviar
-      o estresse, melhorar a concentração, relaxar e criar uma conexão maior com
-      o autocuidado.
-    </p>
-
-    <p>
-      Com foco em qualidade, segurança e naturalidade, a CALMI trabalha com
-      essências pensadas para diferentes momentos do dia, ajudando seus clientes
-      a encontrarem mais equilíbrio emocional de forma prática e acessível.
-    </p>
-  </div>
-
-  <div class="mvv-grid">
-    <div class="mvv-card">
-      <h3>Missão</h3>
-      <p>
-        Proporcionar bem-estar emocional e equilíbrio diário por meio de óleos
-        essenciais puros e soluções naturais, capacitando pessoas a cuidarem de si
-        mesmas e de suas rotinas. Promover o uso consciente e seguro da aromaterapia,
-        educando e inspirando práticas de autocuidado na vida cotidiana.
-      </p>
-    </div>
-
-    <div class="mvv-card">
-      <h3>Visão</h3>
-      <p>
-        Tornar-se referência nacional em produtos de aromaterapia, alcançando lares
-        e ambientes de trabalho com soluções naturais que promovam relaxamento, foco
-        e equilíbrio emocional. Expandir a presença da CALMI por meio de educação,
-        inovação e desenvolvimento sustentável.
-      </p>
-    </div>
-
-    <div class="mvv-card">
-      <h3>Valores</h3>
-      <ul>
-        <li><strong>Qualidade:</strong> garantir produtos eficazes, seguros e confiáveis.</li>
-        <li><strong>Empoderamento:</strong> inspirar clientes e parceiros a incorporarem o bem-estar na rotina.</li>
-        <li><strong>Sustentabilidade:</strong> promover práticas responsáveis e conscientes com o meio ambiente.</li>
-        <li><strong>Inovação:</strong> buscar novas formas de oferecer soluções naturais de alta qualidade.</li>
-        <li><strong>Foco no Cliente:</strong> priorizar experiências e resultados que gerem valor real.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+    <nav>
+      <a href="#produtos">Produtos</a>
+      <a href="#carrinho">Carrinho</a>
+      <a href="#sobre">Sobre nós</a>
+      <a href="#uso">Como usar</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
 
   <section class="products" id="produtos">
     <div class="section-title">
       <h2>Nossos óleos essenciais</h2>
-      <p>Clique para ver mais informações sobre cada produto</p>
+      <p>Escolha seus produtos e adicione ao carrinho</p>
     </div>
 
     <div class="product-grid">
@@ -449,10 +414,10 @@
         <div class="card-content">
           <h3>Lavanda</h3>
           <p>Ideal para momentos de relaxamento e descanso.</p>
-          <p class="price">R$ 79,00</p>
+          <p class="price">R$ 35,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-lavanda')">Ver informações</button>
-         <a href="https://wa.me/5511937684484" target="_blank" class="btn btn-secondary">Comprar agora</a>
+          <button class="btn btn-secondary" onclick="adicionarCarrinho('Lavanda', 35)">Adicionar ao carrinho</button>
 
           <div class="info" id="info-lavanda">
             <strong>Benefícios:</strong>
@@ -471,10 +436,10 @@
         <div class="card-content">
           <h3>Alecrim</h3>
           <p>Perfeito para energia, foco e concentração.</p>
-          <p class="price">R$ 79,00</p>
+          <p class="price">R$ 35,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-alecrim')">Ver informações</button>
-          <a href="https://wa.me/5511937684484" target="_blank" class="btn btn-secondary">Comprar agora</a>
+          <button class="btn btn-secondary" onclick="adicionarCarrinho('Alecrim', 35)">Adicionar ao carrinho</button>
 
           <div class="info" id="info-alecrim">
             <strong>Benefícios:</strong>
@@ -493,10 +458,10 @@
         <div class="card-content">
           <h3>Capim-Limão</h3>
           <p>Uma essência revigorante para renovar o dia.</p>
-          <p class="price">R$ 79,00</p>
+          <p class="price">R$ 35,00</p>
 
           <button class="btn" onclick="mostrarInfo('info-capim')">Ver informações</button>
-          <a href="https://wa.me/5511937684484" target="_blank" class="btn btn-secondary">Comprar agora</a>
+          <button class="btn btn-secondary" onclick="adicionarCarrinho('Capim-Limão', 35)">Adicionar ao carrinho</button>
 
           <div class="info" id="info-capim">
             <strong>Benefícios:</strong>
@@ -510,6 +475,87 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <section class="cart" id="carrinho">
+    <div class="section-title">
+      <h2>Carrinho</h2>
+      <p>Confira os produtos selecionados antes de finalizar o pedido</p>
+    </div>
+
+    <div class="cart-box">
+      <h3>Meu pedido</h3>
+
+      <div id="cart-items">
+        <p>Seu carrinho está vazio.</p>
+      </div>
+
+      <div class="cart-total" id="cart-total">
+        Total: R$ 0,00
+      </div>
+
+      <div class="cart-actions">
+        <button class="btn" onclick="limparCarrinho()">Limpar carrinho</button>
+        <button class="btn btn-secondary" onclick="finalizarPedido()">Finalizar pelo WhatsApp</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="section-title">
+      <h2>Sobre nós</h2>
+      <p>Conheça a história, missão, visão e valores da CALMI</p>
+    </div>
+
+    <div class="history-box">
+      <h3>Nossa história</h3>
+      <p>
+        A CALMI nasceu com o propósito de transformar pequenos momentos da rotina
+        em experiências de cuidado, calma e bem-estar. A empresa surgiu a partir da
+        ideia de oferecer óleos essenciais naturais para pessoas que buscam aliviar
+        o estresse, melhorar a concentração, relaxar e criar uma conexão maior com
+        o autocuidado.
+      </p>
+
+      <p>
+        Com foco em qualidade, segurança e naturalidade, a CALMI trabalha com
+        essências pensadas para diferentes momentos do dia, ajudando seus clientes
+        a encontrarem mais equilíbrio emocional de forma prática e acessível.
+      </p>
+    </div>
+
+    <div class="mvv-grid">
+      <div class="mvv-card">
+        <h3>Missão</h3>
+        <p>
+          Proporcionar bem-estar emocional e equilíbrio diário por meio de óleos
+          essenciais puros e soluções naturais, capacitando pessoas a cuidarem de si
+          mesmas e de suas rotinas. Promover o uso consciente e seguro da aromaterapia,
+          educando e inspirando práticas de autocuidado na vida cotidiana.
+        </p>
+      </div>
+
+      <div class="mvv-card">
+        <h3>Visão</h3>
+        <p>
+          Tornar-se referência nacional em produtos de aromaterapia, alcançando lares
+          e ambientes de trabalho com soluções naturais que promovam relaxamento, foco
+          e equilíbrio emocional. Expandir a presença da CALMI por meio de educação,
+          inovação e desenvolvimento sustentável.
+        </p>
+      </div>
+
+      <div class="mvv-card">
+        <h3>Valores</h3>
+        <ul>
+          <li><strong>Qualidade:</strong> garantir produtos eficazes, seguros e confiáveis.</li>
+          <li><strong>Empoderamento:</strong> inspirar clientes e parceiros a incorporarem o bem-estar na rotina.</li>
+          <li><strong>Sustentabilidade:</strong> promover práticas responsáveis e conscientes com o meio ambiente.</li>
+          <li><strong>Inovação:</strong> buscar novas formas de oferecer soluções naturais de alta qualidade.</li>
+          <li><strong>Foco no Cliente:</strong> priorizar experiências e resultados que gerem valor real.</li>
+        </ul>
+      </div>
     </div>
   </section>
 
@@ -568,32 +614,34 @@
   </section>
 
   <section class="contact" id="contato">
-  <h2>Comprar ou entrar em contato</h2>
-  <p>Fale com a CALMI pelos nossos canais digitais e faça seu pedido.</p>
+    <h2>Comprar ou entrar em contato</h2>
+    <p>Fale com a CALMI pelos nossos canais digitais e faça seu pedido.</p>
 
-  <div class="contact-buttons">
-    <a href="https://wa.me/5511937684484" target="_blank" class="contact-btn">
-      WhatsApp: (11) 93768-4484
-    </a>
+    <div class="contact-buttons">
+      <a href="https://wa.me/5511937684484" target="_blank" class="contact-btn">
+        WhatsApp: (11) 93768-4484
+      </a>
 
-    <a href="https://wa.me/5511973494761" target="_blank" class="contact-btn">
-      WhatsApp: (11) 97349-4761
-    </a>
-  </div>
+      <a href="https://wa.me/5511973494761" target="_blank" class="contact-btn">
+        WhatsApp: (11) 97349-4761
+      </a>
+    </div>
 
-  <p><strong>E-mail comercial:</strong> contato@calmiessencias.com</p>
-  <p><strong>E-mail de atendimento:</strong> atendimento@calmiessencias.com</p>
+    <p><strong>E-mail comercial:</strong> contato@calmiessencias.com</p>
+    <p><strong>E-mail de atendimento:</strong> atendimento@calmiessencias.com</p>
 
-  <p><strong>Instagram:</strong> @calmi.essencias</p>
+    <p><strong>Instagram:</strong> @calmi.essencias</p>
 
-  <p><strong>Fábrica/Escritório:</strong> Rua Elias Gannam, 115 – Vila Bandeirantes – São Paulo – SP</p>
-</section>
+    <p><strong>Fábrica/Escritório:</strong> Rua Elias Gannam, 115 – Vila Bandeirantes – São Paulo – SP</p>
+  </section>
 
   <footer>
     <p>© 2026 CALMI | Essências calmantes para seu bem-estar</p>
   </footer>
 
   <script>
+    let carrinho = [];
+
     function mostrarInfo(id) {
       const info = document.getElementById(id);
 
@@ -602,6 +650,84 @@
       } else {
         info.style.display = "block";
       }
+    }
+
+    function adicionarCarrinho(nome, preco) {
+      const produtoExistente = carrinho.find(item => item.nome === nome);
+
+      if (produtoExistente) {
+        produtoExistente.quantidade++;
+      } else {
+        carrinho.push({
+          nome: nome,
+          preco: preco,
+          quantidade: 1
+        });
+      }
+
+      atualizarCarrinho();
+      document.getElementById("carrinho").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function removerItem(nome) {
+      carrinho = carrinho.filter(item => item.nome !== nome);
+      atualizarCarrinho();
+    }
+
+    function limparCarrinho() {
+      carrinho = [];
+      atualizarCarrinho();
+    }
+
+    function atualizarCarrinho() {
+      const cartItems = document.getElementById("cart-items");
+      const cartTotal = document.getElementById("cart-total");
+
+      if (carrinho.length === 0) {
+        cartItems.innerHTML = "<p>Seu carrinho está vazio.</p>";
+        cartTotal.innerHTML = "Total: R$ 0,00";
+        return;
+      }
+
+      let html = "";
+      let total = 0;
+
+      carrinho.forEach(item => {
+        const subtotal = item.preco * item.quantidade;
+        total += subtotal;
+
+        html += `
+          <div class="cart-item">
+            <span>${item.nome} - ${item.quantidade} unidade(s)</span>
+            <span>R$ ${subtotal.toFixed(2).replace(".", ",")}</span>
+            <button onclick="removerItem('${item.nome}')">Remover</button>
+          </div>
+        `;
+      });
+
+      cartItems.innerHTML = html;
+      cartTotal.innerHTML = `Total: R$ ${total.toFixed(2).replace(".", ",")}`;
+    }
+
+    function finalizarPedido() {
+      if (carrinho.length === 0) {
+        alert("Adicione pelo menos um produto ao carrinho.");
+        return;
+      }
+
+      let mensagem = "Olá! Gostaria de fazer um pedido na CALMI:%0A%0A";
+      let total = 0;
+
+      carrinho.forEach(item => {
+        const subtotal = item.preco * item.quantidade;
+        total += subtotal;
+        mensagem += `- ${item.nome}: ${item.quantidade} unidade(s) - R$ ${subtotal.toFixed(2).replace(".", ",")}%0A`;
+      });
+
+      mensagem += `%0ATotal: R$ ${total.toFixed(2).replace(".", ",")}`;
+      mensagem += "%0A%0APoderia me passar as informações para finalizar a compra?";
+
+      window.open(`https://wa.me/5511937684484?text=${mensagem}`, "_blank");
     }
   </script>
 
