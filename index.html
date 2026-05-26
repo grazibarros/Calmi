@@ -87,7 +87,37 @@
       background-color: #b59a58;
       margin-left: 8px;
     }
+.hero {
+  min-height: 85vh;
+  background: linear-gradient(rgba(248, 244, 236, 0.72), rgba(248, 244, 236, 0.72)),
+    url("produtos.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 60px 8%;
+}
 
+.hero-content {
+  max-width: 650px;
+  background-color: rgba(255, 255, 255, 0.86);
+  padding: 40px;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.hero h2 {
+  font-size: 46px;
+  color: #b59a58;
+  margin-bottom: 15px;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 25px;
+  color: #3f5337;
+}
     .products {
       background-color: #f8f4ec;
     }
@@ -446,6 +476,13 @@
       <a href="#uso">Como usar</a>
       <a href="#contato">Contato</a>
     </nav>
+    <section class="hero">
+  <div class="hero-content">
+    <h2>CALMI</h2>
+    <p>Essências calmantes para seu bem-estar: alivie o estresse de forma natural e prática.</p>
+    <a href="#produtos" class="btn">Conheça nossos óleos</a>
+  </div>
+</section>
   </header>
 
   <section class="products" id="produtos">
